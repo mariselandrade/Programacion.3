@@ -1,0 +1,13 @@
+% calcular la trayectoria del cohete (d), a partir de la ecuaciòn altura =
+% 60+2.13t^2-0.0013t^4+0.000034t^4.751%, 
+Altura='h+2.13*t.^2-0.0013*t.^4+0.000034*t.^4.751'; % Desplazamiento del cohete con respecto al tiempo
+h=60; %altura del cohete
+for x=Altura % altura recorrida en el tiempo establecido
+    t=0:2:100; % incremento de tiempo de 2s    
+    d=x*t % desplazamiento de acuerdo al intervalo de tiempo.
+    if t==100 % tiempo calculado hasta 100s.
+        break
+    end 
+end
+plot(t)
+grid on
